@@ -35,13 +35,13 @@ const myCreatedRoute = createBrowserRouter([
       {
         path: "/mycart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/mycart"),
+        loader: () => fetch("https://brand-shop-server-six-vert.vercel.app/mycart"),
       },
 
       {
         path: "/newarrivals",
         element: <NewArrivals></NewArrivals>,
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () => fetch("https://brand-shop-server-six-vert.vercel.app/product"),
       },
       {
         path: "/signup",
@@ -53,8 +53,8 @@ const myCreatedRoute = createBrowserRouter([
       },
       {
         path: "/users",
-        element: <Users></Users>,
-        loader: () => fetch("http://localhost:5000/users"),
+        element: <PrivateRoute><Users></Users></PrivateRoute>,
+        loader: () => fetch("https://brand-shop-server-six-vert.vercel.app/users"),
       },
       {
         path: "/products/:brandName",
@@ -65,13 +65,13 @@ const myCreatedRoute = createBrowserRouter([
         path: "/updateproduct/:id",
         element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://brand-shop-server-six-vert.vercel.app/product/${params.id}`),
       },
       {
         path: "/product/:id", // Add the new route for product detail
         element: <PrivateRoute><ProductDetail></ProductDetail></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(`https://brand-shop-server-six-vert.vercel.app/product/${params.id}`),
       },
     ],
   },

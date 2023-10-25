@@ -8,7 +8,7 @@ const Users = () => {
 
   const handleDelete = (id) => {
     //confirm to delete
-    fetch(`http://localhost:5000/users/${id}`, {
+    fetch(`https://brand-shop-server-six-vert.vercel.app/users/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -41,8 +41,7 @@ const Users = () => {
             {/* row 1 */}
             {users.map((user, index) => (
               <tr key={user._id}>
-                <th>{counter + index}</th>{" "}
-                {/* Increment the counter using the index */}
+                <th>{counter + index}</th>
                 <td>{user.email}</td>
                 <td>{user.createdAt}</td>
                 <td>

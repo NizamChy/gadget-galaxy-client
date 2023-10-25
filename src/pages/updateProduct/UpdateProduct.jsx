@@ -26,7 +26,7 @@ const UpdateProduct = () => {
     // console.log(newProduct);
 
     //send data to the server
-    fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`https://brand-shop-server-six-vert.vercel.app/product/${_id}`, {
       method: 'PUT',
       headers:{
         'content-type': 'application/json'

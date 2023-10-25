@@ -24,7 +24,7 @@ const ProductDetail = () => {
     }
 
     // send data to server
-    fetch("http://localhost:5000/mycart", {
+    fetch("https://brand-shop-server-six-vert.vercel.app/mycart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

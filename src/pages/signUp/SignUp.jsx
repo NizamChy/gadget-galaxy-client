@@ -62,7 +62,7 @@ const SignUp = () => {
         const createdAt = result.user.metadata?.creationTime;
 
         const user = { email, createdAt };
-        fetch("http://localhost:5000/users", {
+        fetch("https://brand-shop-server-six-vert.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

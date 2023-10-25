@@ -54,34 +54,34 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-            <NavLink
-        to="/mycart"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? "pending"
-            : isActive
-            ? "text-[#fc3468] underline"
-            : ""
-        }
-      >
-        <span className="flex items-center">
-          My Cart
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 ml-2"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-            />
-          </svg>
-        </span>
-      </NavLink>
+              <NavLink
+                to="/mycart"
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? "pending"
+                    : isActive
+                    ? "text-[#fc3468] underline"
+                    : ""
+                }
+              >
+                <span className="flex items-center">
+                  My Cart
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </span>
+              </NavLink>
             </li>
 
             <li>
@@ -139,8 +139,6 @@ const Navbar = () => {
 
         {/* my navlinks */}
 
-        
-
         <div className="flex-none grid justify-end absolute top-10 right-10 sm:static sm:justify-start sm:right-auto">
           <div className="dropdown dropdown-end sm:dropdown-start">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -149,9 +147,11 @@ const Navbar = () => {
                 {user && user.photoURL ? (
                   <img src={user.photoURL} alt="User Avatar" />
                 ) : (
-                  <img src="https://i.ibb.co/rF8XjJW/image.png" alt="Default Avatar" /> )
-                }
-                
+                  <img
+                    src="https://i.ibb.co/rF8XjJW/image.png"
+                    alt="Default Avatar"
+                  />
+                )}
               </div>
             </label>
             <ul
@@ -161,41 +161,50 @@ const Navbar = () => {
               <li>
                 <a className="justify-between">
                   {/* Profile */}
-                  {
-                    user && <span>{user.displayName}</span>
-                  }
-
+                  {user && <span>{user.displayName}</span>}
 
                   {/* <span className="badge">New</span> */}
                 </a>
               </li>
+              <li>{user && <span>{user.email}</span>}</li>
               <li>
-              {
-                    user && <span>{user.email}</span>
-                  }
+                <div>
+                  {user ? (
+                    <p onClick={handleSignOut} className="cursor-pointer">
+                      Sign Out
+                    </p>
+                  ) : (
+                    <NavLink
+                      to="/signin"
+                      className={({ isActive, isPending }) =>
+                        isPending
+                          ? "pending"
+                          : isActive
+                          ? "text-[#fc3468] underline"
+                          : ""
+                      }
+                    >
+                      Sign in
+                    </NavLink>
+                  )}
+                </div>
               </li>
+              {/* all users  */}
               <li>
-  <div>
-    {user ? (
-      <p onClick={handleSignOut} className="cursor-pointer">
-        Sign Out
-      </p>
-    ) : (
-      <NavLink
-        to="/signin"
-        className={({ isActive, isPending }) =>
-          isPending
-            ? "pending"
-            : isActive
-            ? "text-[#fc3468] underline"
-            : ""
-        }
-      >
-        Sign in
-      </NavLink>
-    )}
-  </div>
-</li>
+              <NavLink
+                to="/users"
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? "pending"
+                    : isActive
+                    ? "text-[#fc3468] underline"
+                    : ""
+                }
+              >
+                All users
+              </NavLink>
+            </li>
+              {/* all users  */}
             </ul>
           </div>
         </div>

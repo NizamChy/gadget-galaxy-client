@@ -23,7 +23,7 @@ const NewArrivals = () => {
       if (result.isConfirmed) {
         setLoading(true); // Set loading state to true
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://brand-shop-server-six-vert.vercel.app/product/${_id}`, {
           method: 'DELETE'
         })
         .then(res => res.json())
