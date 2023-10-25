@@ -7,6 +7,7 @@ const PrivateRoute = ({ children }) => {
 
   const location = useLocation();
   // console.log(location.pathname);
+  
 
   if(loading){
     return <div className="flex justify-center items-center">
