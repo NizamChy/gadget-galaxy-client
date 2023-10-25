@@ -1,5 +1,3 @@
-
-
 const AboutUs = () => {
   return (
     <section className="bg-blue-900 text-white py-16">
@@ -24,7 +22,11 @@ const AboutUs = () => {
         </div>
 
         <p className="text-gray-100 text-sm w-[80%] lg:text-lg mt-8 text-center lg:w-[60%]">
-          Gadget Galaxy is your one-stop destination for the latest in technology and electronics. We offer a wide range of products from top brands such as Apple, Samsung, Sony, Google, Intel, and more. Our mission is to provide you with the best gadgets and accessories to enhance your digital lifestyle.
+          Gadget Galaxy is your one-stop destination for the latest in
+          technology and electronics. We offer a wide range of products from top
+          brands such as Apple, Samsung, Sony, Google, Intel, and more. Our
+          mission is to provide you with the best gadgets and accessories to
+          enhance your digital lifestyle.
         </p>
       </div>
     </section>

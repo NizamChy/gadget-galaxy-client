@@ -9,7 +9,9 @@ const ProductsByBrand = () => {
 
   useEffect(() => {
     // Fetch products filtered by brandName from the backend
-    fetch(`https://brand-shop-server-six-vert.vercel.app/products?brand=${brandName}`)
+    fetch(
+      `https://brand-shop-server-six-vert.vercel.app/products?brand=${brandName}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

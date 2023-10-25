@@ -191,19 +191,19 @@ const Navbar = () => {
               </li>
               {/* all users  */}
               <li>
-              <NavLink
-                to="/users"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending"
-                    : isActive
-                    ? "text-[#fc3468] underline"
-                    : ""
-                }
-              >
-                All users
-              </NavLink>
-            </li>
+                <NavLink
+                  to="/users"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending"
+                      : isActive
+                      ? "text-[#fc3468] underline"
+                      : ""
+                  }
+                >
+                  All users
+                </NavLink>
+              </li>
               {/* all users  */}
             </ul>
           </div>
