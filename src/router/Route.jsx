@@ -37,7 +37,6 @@ const myCreatedRoute = createBrowserRouter([
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
         loader: () => fetch("https://brand-shop-server-six-vert.vercel.app/mycart"),
       },
-
       {
         path: "/newarrivals",
         element: <NewArrivals></NewArrivals>,
