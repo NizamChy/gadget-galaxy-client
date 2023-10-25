@@ -37,4 +37,4 @@ Gadget Galaxy is a website dedicated to technology and electronics enthusiasts. 
 - [Nizam Chowdhury]
 
 ## Clients-Side Live Link
-[Live Demo](https://brand-shop-10-b5fbc.web.app/)
+[Live Demo of Gadget Galaxy website](https://brand-shop-10-b5fbc.web.app/)
