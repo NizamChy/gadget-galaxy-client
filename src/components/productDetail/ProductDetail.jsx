@@ -6,7 +6,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { useState } from "react";
 
 const ProductDetail = () => {
-  // const { name, image, description, type, price, rating } = product;
+  
   const product = useLoaderData();
   const { _id, name, image, brand, type, price, description, rating } = product;
 
