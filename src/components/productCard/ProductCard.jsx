@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 // ProductCard.jsx
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
